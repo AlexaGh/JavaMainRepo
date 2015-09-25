@@ -1,0 +1,82 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<id>3861851541721</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>9400054925427</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>6694265439915</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>7154383760158</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>4896303172230</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>5075948481849</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>3256462802774</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>9350517217068</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>8570075822727</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>5347470337240</id>
+	<name>null</name>
+	<salary>null</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEE>
+</content>

@@ -1,15 +1,26 @@
-package alexas;
+package javasmmr.zoowsome.views;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
-public class FrameMenu extends JFrame {
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+
+import javasmmr.zoowsome.views.ZooFrame;
+
+public class AnimalFrame extends ZooFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	private JLabel labelImage = new JLabel();
 
 	private JRadioButton btnAquatic = new JRadioButton("Aquatic");
 	private JRadioButton btnBird = new JRadioButton("Bird");
@@ -17,22 +28,21 @@ public class FrameMenu extends JFrame {
 	private JRadioButton btnMammal = new JRadioButton("Mammal");
 	private JRadioButton btnReptile = new JRadioButton("Reptile");
 
-	private JLabel labelImage = new JLabel();
+	private ImageIcon iconAquatic = new ImageIcon(getClass().getResource("/javasmmr/zoowsome/views/fish.png"));
+	private ImageIcon iconBird = new ImageIcon(getClass().getResource("/javasmmr/zoowsome/views/bird.gif"));
+	private ImageIcon iconInsect = new ImageIcon(getClass().getResource("/javasmmr/zoowsome/views/fly.png"));
+	private ImageIcon iconMammal = new ImageIcon(getClass().getResource("/javasmmr/zoowsome/views/dog.gif"));
+	private ImageIcon iconReptile = new ImageIcon(getClass().getResource("/javasmmr/zoowsome/views/trex2.png"));
 
-	// C:/Users/Alexa/Desktop/JavaSummerCourse/MyRepo/JavaMainRepo/Students/Ghiurau
-	// A. Alexandra Cristina/TestingJRadioButton/src
-	private ImageIcon iconAquatic = new ImageIcon(getClass().getResource("/alexas/fish.png"));
-	private ImageIcon iconBird = new ImageIcon(getClass().getResource("/alexas/bird.gif"));
-	private ImageIcon iconInsect = new ImageIcon(getClass().getResource("/alexas/fly.png"));
-	private ImageIcon iconMammal = new ImageIcon(getClass().getResource("/alexas/dog.gif"));
-	private ImageIcon iconReptile = new ImageIcon(getClass().getResource("/alexas/trex2.png"));
-	
+	private JLabel item1;
+
 	AquaticFrame alexaa = new AquaticFrame();
 
-
-	public FrameMenu() {
-		super("The title");
-		setLayout(new FlowLayout());
+	public AnimalFrame() {
+		
+		super("Choose your type of animal");
+		item1 = new JLabel("Choose a type of animal:", JLabel.LEADING);
+		add(item1);
 
 		ButtonGroup buttonGroup = new ButtonGroup();
 		buttonGroup.add(btnAquatic);
@@ -41,10 +51,11 @@ public class FrameMenu extends JFrame {
 		buttonGroup.add(btnMammal);
 		buttonGroup.add(btnReptile);
 
-		/*btnAquatic.setMnemonic(KeyEvent.VK_N);
+		// first option will appear as marked/"chosen"
+		btnAquatic.setMnemonic(KeyEvent.VK_N);
 		btnAquatic.setActionCommand("aquatic");
 		labelImage.setIcon(iconAquatic);
-		btnAquatic.setSelected(true);*/
+		btnAquatic.setSelected(true);
 
 		add(btnAquatic);
 		add(btnBird);
@@ -68,9 +79,8 @@ public class FrameMenu extends JFrame {
 		btnMammal.addActionListener(actionListener);
 		btnReptile.addActionListener(actionListener);
 
-
 		pack();
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 
 	}
@@ -78,42 +88,35 @@ public class FrameMenu extends JFrame {
 	class RadioButtonActionListener implements ActionListener {
 
 		@Override
-		public void actionPerformed(ActionEvent event) {
-			JRadioButton button = (JRadioButton) event.getSource();
+		public void actionPerformed(ActionEvent e) {
+			JRadioButton button = (JRadioButton) e.getSource();
 
 			if (button == btnAquatic) {
 
-				labelImage.setIcon(iconAquatic);
-				alexaa.setSize(600,300);
-				alexaa.setLocation(650, 200);
-				alexaa.setVisible(true);
-				
+				/*labelImage.setIcon(iconAquatic);
+				alexaa.setSize(600, 300);
+				alexaa.setLocation(40, 200);
+				alexaa.setVisible(true);*/
 
 			} else if (button == btnBird) {
 
 				labelImage.setIcon(iconBird);
-				JOptionPane.showMessageDialog(null, "hmm1");
 
 			} else if (button == btnInsect) {
 
 				labelImage.setIcon(iconInsect);
-				JOptionPane.showMessageDialog(null, "hmm2");
 
 			} else if (button == btnMammal) {
 
 				labelImage.setIcon(iconMammal);
-				JOptionPane.showMessageDialog(null, "hmm3");
 
 			} else if (button == btnReptile) {
 
 				labelImage.setIcon(iconReptile);
-				JOptionPane.showMessageDialog(null, "hmm4");
 
 			}
+
 		}
 
 	}
-
-
-
 }

@@ -37,6 +37,7 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I {
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		JButton backButton = new JButton("Back");
+		backButton.setToolTipText("Retreat!");
 		buttonPanel.add(backButton);
 		this.add(buttonPanel, BorderLayout.NORTH);
 		backButton.addActionListener(a);

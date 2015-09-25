@@ -1,6 +1,7 @@
 package javasmmr.zoowsome.views;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -37,15 +38,12 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I {
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		JButton backButton = new JButton("Back");
+		backButton.setToolTipText("Retreat!");
 		buttonPanel.add(backButton);
 		this.add(buttonPanel, BorderLayout.NORTH);
 		backButton.addActionListener(a);
-
+		//Clock clock = new Clock();
 	}
-
-	@Override
-	public void goBack() {
-
-	}
+	
 
 }

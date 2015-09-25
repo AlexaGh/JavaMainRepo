@@ -1,21 +1,30 @@
 package javasmmr.zoowsome.views;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
-public class AddFrame extends ZooFrame {
+public class AddFrame extends ZooFrame{
 
 	private static final long serialVersionUID = 1L;
 
 	private JButton addAnimalbtn;;
 	private JButton addEmployeebtn;
-	private JLabel text;
+	private JLabel text;	
+	
+
+
 
 	public AddFrame(String title) {
 
@@ -31,39 +40,33 @@ public class AddFrame extends ZooFrame {
 		pan.setLayout(slPanel);
 
 		// example taken from zoo part 6
-		text = new JLabel("Choose what do you want to add :");
+		text = new JLabel("What will it be?");
 		slPanel.putConstraint(SpringLayout.NORTH, text, 30, SpringLayout.NORTH, pan);
-		slPanel.putConstraint(SpringLayout.WEST, text, 30, SpringLayout.WEST, pan);
+		slPanel.putConstraint(SpringLayout.WEST, text, 70, SpringLayout.WEST, pan);
 		pan.add(text);
 
 		addAnimalbtn = new JButton("Add Animal");
 		slPanel.putConstraint(SpringLayout.NORTH, addAnimalbtn, 65, SpringLayout.NORTH, pan);
 		slPanel.putConstraint(SpringLayout.WEST, addAnimalbtn, 60, SpringLayout.WEST, pan);
+		addAnimalbtn.setToolTipText("A cat snaps a rat's paxwax");
 		pan.add(addAnimalbtn);
 
 		addEmployeebtn = new JButton("Add Employee");
 		slPanel.putConstraint(SpringLayout.NORTH, addEmployeebtn, 150, SpringLayout.NORTH, pan);
 		slPanel.putConstraint(SpringLayout.WEST, addEmployeebtn, 50, SpringLayout.WEST, pan);
+		addEmployeebtn.setToolTipText("When you write copy you have the right to copyright the copy you write.");
 		pan.add(addEmployeebtn);
 
 		JPanel panel_2 = new JPanel();
 		contentPanel.add(panel_2);
 		setVisible(true);
 
-		ButtonActionListener actionListener = new ButtonActionListener();
+		/*ButtonActionListener actionListener = new ButtonActionListener();
 		addAnimalbtn.addActionListener(actionListener);
-		addEmployeebtn.addActionListener(actionListener);
+		addEmployeebtn.addActionListener(actionListener);*/
 
-	}
-/*
- * 
- *     /\
- *     ||
- *     ||
- *     \/
- *     
- *     these kinda do the same thing, right?
- *     
+	} 
+	
 	public void setAnimalButtonActionListener(ActionListener a) {
 		addAnimalbtn.addActionListener(a);
 	}
@@ -71,15 +74,8 @@ public class AddFrame extends ZooFrame {
 	public void setEmployeeButtonActionListener(ActionListener a) {
 		addEmployeebtn.addActionListener(a);
 	}
-	*/
-
-	@Override
-	public void goBack() {
-		// TODO Auto-generated method stub
-
-	}
-
-	class ButtonActionListener implements ActionListener {
+	
+/*	class ButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JButton button = (JButton) e.getSource();
 
@@ -93,4 +89,13 @@ public class AddFrame extends ZooFrame {
 			}
 		}
 	}
+	
+*/
+	@Override
+	public void goBack() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
 }
