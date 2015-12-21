@@ -1,14 +1,8 @@
 package javasmmr.zoowsome.views;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.util.Date;
+
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -23,9 +17,6 @@ public class AddFrame extends ZooFrame{
 	private JButton addEmployeebtn;
 	private JLabel text;	
 	
-
-
-
 	public AddFrame(String title) {
 
 		super(title);
@@ -61,10 +52,6 @@ public class AddFrame extends ZooFrame{
 		contentPanel.add(panel_2);
 		setVisible(true);
 
-		/*ButtonActionListener actionListener = new ButtonActionListener();
-		addAnimalbtn.addActionListener(actionListener);
-		addEmployeebtn.addActionListener(actionListener);*/
-
 	} 
 	
 	public void setAnimalButtonActionListener(ActionListener a) {
@@ -75,22 +62,7 @@ public class AddFrame extends ZooFrame{
 		addEmployeebtn.addActionListener(a);
 	}
 	
-/*	class ButtonActionListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			JButton button = (JButton) e.getSource();
 
-			if (button == addAnimalbtn) {
-
-				AnimalFrame alexa = new AnimalFrame();
-				alexa.setVisible(true);
-
-			} else if (button == addEmployeebtn) {
-
-			}
-		}
-	}
-	
-*/
 	@Override
 	public void goBack() {
 		// TODO Auto-generated method stub

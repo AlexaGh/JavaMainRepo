@@ -1,18 +1,19 @@
 package javasmmr.zoowsome.views;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
+import java.awt.Dimension;
 import java.awt.event.ActionListener;
 
 import javasmmr.zoowsome.services.factories.Constants.Frames;
 import javasmmr.zoowsome.views.utilities.FrameStack;
+import javasmmr.zoowsome.views.utilities.Clock;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JToolBar;
 import javax.swing.border.EmptyBorder;
 
 public abstract class ZooFrame extends JFrame implements ZooFrame_I {
@@ -34,16 +35,22 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I {
 		add(contentPanel, BorderLayout.CENTER);
 	}
 
-	public void setBackButtonActionListener(ActionListener a) {
-		JPanel buttonPanel = new JPanel();
-		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+	public void setToolBar(ActionListener a) {
+
+		JToolBar toolBar = new JToolBar("Still draggable");
+		setPreferredSize(new Dimension(450, 130));
+		setBackButtonActionListener(a, toolBar);
+		Clock clock = new Clock();
+		clock.setClock(toolBar);
+		add(toolBar, BorderLayout.PAGE_START);
+
+	}
+
+	public void setBackButtonActionListener(ActionListener a, JToolBar toolBar) {
 		JButton backButton = new JButton("Back");
 		backButton.setToolTipText("Retreat!");
-		buttonPanel.add(backButton);
-		this.add(buttonPanel, BorderLayout.NORTH);
+		toolBar.add(backButton);
 		backButton.addActionListener(a);
-		//Clock clock = new Clock();
 	}
-	
 
 }
